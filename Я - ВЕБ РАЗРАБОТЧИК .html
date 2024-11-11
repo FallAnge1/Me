@@ -1,0 +1,717 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Я - ВЕБ РАЗРАБОТЧИК</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="10ac63b6-ac3b-468d-b3ee-205c1ab4a4fa" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">📖</span></div><h1 class="page-title">Я - ВЕБ РАЗРАБОТЧИК</h1><p class="page-description"></p></header><div class="page-body"><p id="129c12d2-b74f-80cf-a4f0-f648d6d97516" class="">То что надо изучить чтобы стать веб разработчиком.</p><h1 id="129c12d2-b74f-80cf-90f4-f3c495d34c22" class=""><em><strong>BACK-END ЧАСТЬ</strong></em></h1><h2 id="129c12d2-b74f-80ee-83f6-f74f3105f13d" class=""><mark class="highlight-red"><mark class="highlight-gray_background">Выбор языка программирование</mark></mark></h2><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="129c12d2-b74f-803f-a0e0-f45538f1a33e"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/translate_red.svg"/></div><div style="width:100%"><p id="d578f230-9e54-46d3-af21-5b713e4a1abb" class="">JavaScript — Python — PHP — Ruby — Java — C# — GO</p></div></figure><p id="129c12d2-b74f-80db-89e3-ceab9c763e1e" class="">Особенности:</p><p id="63aec1eb-4738-4a8e-a93f-6f7fd42d9af6" class="">JavaScript можно использовать для FullStack проектов </p><p id="129c12d2-b74f-808b-8c73-ca9436b3440e" class="">Python — PHP — Ruby используются только на стороне сервера</p><p id="129c12d2-b74f-80b4-a8c9-f505e0df6bc2" class="">Java — C# в основном используются для создания крупных приложений (Используются в крупных организациях)</p><p id="129c12d2-b74f-80ab-9341-ee973683da31" class="">GO часто используют для высокопроизводительных и параллельных приложений </p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="129c12d2-b74f-8097-be9b-d17820e3cc46"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/translate_red.svg"/></div><div style="width:100%"><p id="129c12d2-b74f-80c6-96a7-d942ad985666" class="">Не пытайся сразу изучить все языки! — это распространенная ОШИБКА!</p></div></figure><p id="129c12d2-b74f-80d9-b372-efe5f9d2790a" class="">Чтобы утверждать что знаешь хоть один язык, ты должен знать экосистему языка и библиотеки этого языка.</p><h2 id="129c12d2-b74f-80f6-8f90-c3cbbbcddf4d" class=""><mark class="highlight-red"><mark class="highlight-gray_background">Git и GitHub </mark></mark></h2><p id="129c12d2-b74f-80a0-85b9-f2792546da5d" class="">Это инструмент для отслеживания изменений в коде и совместной работы.<div class="indented"><p id="129c12d2-b74f-8055-8186-ed50b7edc48e" class=""> Для изучения потребуется примерно <mark class="highlight-yellow">2 недели</mark></p></div></p><p id="129c12d2-b74f-80b2-9caa-c6946f207943" class="">
+</p><h2 id="129c12d2-b74f-8065-8610-e56d2f5c770c" class=""><mark class="highlight-red"><mark class="highlight-gray_background">Структуры данных и алгоритмы </mark></mark></h2><p id="129c12d2-b74f-8044-a67b-e5687a3a1359" class="">Важные предметы для повышения уровня и Для собеса.  <mark class="highlight-yellow">[ 2 месяца ]</mark></p><p id="129c12d2-b74f-80ec-95e2-f81b976b0768" class="">
+</p><h2 id="129c12d2-b74f-8068-aa68-f2726cfe36da" class=""><mark class="highlight-red"><mark class="highlight-gray_background">[ БАЗА ДАННЫХ ]   Проектирование Баз Данных </mark></mark></h2><p id="129c12d2-b74f-8098-be58-d464a37218fb" class=""><span style="border-bottom:0.05em solid">Существует </span><mark class="highlight-pink"><span style="border-bottom:0.05em solid">два </span></mark><span style="border-bottom:0.05em solid">типа базы данных </span></p><div id="129c12d2-b74f-809f-b008-f551315ec75e" class="column-list"><div id="129c12d2-b74f-80d3-b567-f5f3bb8d8ecb" style="width:112.5%" class="column"><p id="129c12d2-b74f-808a-a7cc-f72490d4643d" class=""><strong>Реляционные </strong></p><p id="129c12d2-b74f-80e9-a4e5-d75443fad5e8" class=""><em><strong>[ MySql — PostgreSQL — SQL Server — Oracle ]</strong></em></p><p id="129c12d2-b74f-8018-b156-ccf58c2de147" class=""><em><strong>Во всех этих используется язык — SQL </strong></em></p><ul id="129c12d2-b74f-8060-bef6-c30a45ae49bf" class="bulleted-list"><li style="list-style-type:disc">Данные хранятся в таблицах со строками и столбцами которые связаны между собой.</li></ul><ul id="129c12d2-b74f-801d-bbe0-f5f9738e1134" class="bulleted-list"><li style="list-style-type:disc">Лучше всего подходит для приложений требующих <mark class="highlight-pink">сложных запросов</mark></li></ul><p id="129c12d2-b74f-80c0-8edc-ed3b1de57a4a" class="">
+</p></div><div id="129c12d2-b74f-8008-8fe2-f3b08d41cea8" style="width:87.49999999999999%" class="column"><p id="129c12d2-b74f-8024-82c9-db8bfb77826d" class=""><strong>Нереляционные </strong>( NoSql ) </p><p id="129c12d2-b74f-8072-b908-d1e92a9ec3af" class="">[ MongoDB — CouchDB — Cassandra ]</p><ul id="129c12d2-b74f-80ed-aef2-fb5203615ecd" class="bulleted-list"><li style="list-style-type:disc">Данные хранятся без определенной структуры.</li></ul><ul id="129c12d2-b74f-807e-b414-cbc8929c439f" class="bulleted-list"><li style="list-style-type:disc">Лучше всего подходит для приложений требующих <mark class="highlight-pink">гибких моделей данных</mark></li></ul><p id="129c12d2-b74f-807a-9dcf-c92219cab3c5" class="">
+</p></div></div><p id="129c12d2-b74f-8030-bde9-e6bd348d8196" class="">
+</p><p id="129c12d2-b74f-808a-8ea2-d60b00c8e8f8" class="">
+</p><h2 id="129c12d2-b74f-80ed-9814-ffe1e389e5bd" class=""><mark class="highlight-red"><mark class="highlight-gray_background">Веб Фреймворки      </mark></mark><mark class="highlight-yellow"><mark class="highlight-gray_background">[ 2 месяца ]</mark></mark><mark class="highlight-red"><mark class="highlight-gray_background"> </mark></mark></h2><ul id="129c12d2-b74f-80f7-a4de-ce3060a8c029" class="toggle"><li><details open=""><summary>Зависит от выбранного вами языка программирования.</summary><ul id="129c12d2-b74f-80b9-aaf6-c2a624b50db9" class="bulleted-list"><li style="list-style-type:disc">JavaScript —&gt; Express.JS</li></ul><ul id="129c12d2-b74f-80c9-ba17-f85b735e0d01" class="bulleted-list"><li style="list-style-type:disc">Python —&gt; Django</li></ul><ul id="129c12d2-b74f-807c-a67f-c7e5561f68e8" class="bulleted-list"><li style="list-style-type:disc">PHP —&gt; Laravel</li></ul><ul id="129c12d2-b74f-808b-a298-c9669bc58954" class="bulleted-list"><li style="list-style-type:disc">Java —&gt; Spring Boot</li></ul><ul id="129c12d2-b74f-8076-8ec7-e7f51d447f3f" class="bulleted-list"><li style="list-style-type:disc">C# —&gt; .NET Core</li></ul><ul id="129c12d2-b74f-80b1-bea9-eaf83d1b7155" class="bulleted-list"><li style="list-style-type:disc">Ruby —&gt; Ruby on Rails</li></ul><ul id="129c12d2-b74f-801c-9574-fbe5695f21af" class="bulleted-list"><li style="list-style-type:disc">GO —&gt; Gin</li></ul></details></li></ul><p id="129c12d2-b74f-801a-ae4f-f7304fe8faf4" class=""><em>Все эти фреймворки выполняют одну задачу</em></p><p id="129c12d2-b74f-80f0-82dd-f5dc66e647b7" class="">Предоставляют <mark class="highlight-pink">набор инструментов</mark> для создания Back-End</p><ul id="129c12d2-b74f-80b8-b32f-cb2fe1de31b7" class="bulleted-list"><li style="list-style-type:disc">Маршрутизация </li></ul><ul id="129c12d2-b74f-808a-89ce-c08f0330caed" class="bulleted-list"><li style="list-style-type:disc">Обработка запросов / ответов </li></ul><ul id="129c12d2-b74f-80eb-95cb-e403db4ab990" class="bulleted-list"><li style="list-style-type:disc">Работа с базами данных</li></ul><ul id="129c12d2-b74f-80b8-8418-fcc279c9f7e4" class="bulleted-list"><li style="list-style-type:disc">Обеспечение безопасности</li></ul><p id="129c12d2-b74f-806d-86c0-e0cf6b09fa24" class="">С помощью этих фреймворков мы можем создавать API (Интерфейсы программирование для взаимодействия)</p><p id="129c12d2-b74f-806f-945c-dd6581906bd5" class=""><em>API — это инструмент связи между фронтэндом и бэкендом. Позволяющий отправлять или получать данные между собой.</em></p><p id="129c12d2-b74f-8062-a5f5-efd708188fe5" class="">
+</p><figure id="129c12d2-b74f-8049-af48-d44656453c6e" class="image"><a href="image.png"><img style="width:1200px" src="image.png"/></a></figure><p id="129c12d2-b74f-8077-a0cb-dd29ff3a8072" class="">
+</p><p id="129c12d2-b74f-807c-a5d5-c670fab5ef4f" class="">
+</p><p id="129c12d2-b74f-8074-ac09-c0a1d1938358" class="">
+</p><p id="129c12d2-b74f-8081-a888-f836c1f5c876" class="">
+</p><p id="129c12d2-b74f-8079-8cf0-d1ff5df2ddd9" class="">
+</p><p id="129c12d2-b74f-8084-a5a7-f3735f949ad5" class="">
+</p><p id="129c12d2-b74f-8024-973f-e8cb7d4ddd38" class="">
+</p><p id="129c12d2-b74f-8058-bed0-dc98f9029b45" class="">
+</p><p id="129c12d2-b74f-802b-a931-cea9f28ed0af" class="">
+</p><p id="129c12d2-b74f-807a-b8b8-ef4144601a19" class="">
+</p><p id="129c12d2-b74f-806b-8267-e7a3070e9f83" class="">
+</p><p id="129c12d2-b74f-801e-ad0c-deca71a4ae2c" class="">
+</p><p id="129c12d2-b74f-80ae-b329-e9d51cd5216b" class="">
+</p><p id="129c12d2-b74f-80d1-b499-f5ad9ef0fafe" class="">
+</p><p id="129c12d2-b74f-803d-8020-f5c1f44c955c" class="">
+</p><p id="129c12d2-b74f-80eb-b284-f8f276a1465f" class="">
+</p><h1 id="129c12d2-b74f-8020-b943-f1e83b1db2ae" class=""><em><strong>FRONT-END РАЗРАБОТКА</strong></em></h1><p id="129c12d2-b74f-806b-83e9-eaaace408447" class="">
+</p><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Основана на трех основных языках : </summary><div class="indented"><p id="129c12d2-b74f-8029-978f-f8958d8b476a" class="">HTML — <em>язык гипертекстовой разметки документов для структурирование веб-страниц </em></p><p id="129c12d2-b74f-80c7-a2dd-d6c86f62dce5" class="">CSS — <em>каскадные таблицы стилей. // CSS используется для стилизации</em></p><p id="129c12d2-b74f-807b-b9e1-fa47e7780296" class="">JavaScript — </p></div></details><p id="129c12d2-b74f-8069-88e3-c510cbed2f85" class="">
+</p><h2 id="129c12d2-b74f-8039-91e0-d25316a2b67d" class=""><mark class="highlight-red"><mark class="highlight-gray_background">TypeScript</mark></mark></h2><p id="129c12d2-b74f-80ac-b50b-c8bb25ba3521" class="">Типизированный язык, основанный на JavaScript.</p><p id="129c12d2-b74f-80cc-945f-ce37411cc9fe" class="">Добавляет статическую типизацию и возможности.</p><p id="129c12d2-b74f-807a-a360-e6164c684602" class="">Используется для того, чтобы писать более надежный код. В основном используется в крупных проектах</p><p id="129c12d2-b74f-8006-8211-ea92b8948d05" class="">
+</p><h2 id="129c12d2-b74f-808b-b924-c685ec82a4d1" class=""><mark class="highlight-red"><mark class="highlight-gray_background">Библиотеки / Фреймворки JS</mark></mark></h2><p id="129c12d2-b74f-8062-bdf4-e6cd5c9d99f4" class="">Для создания пользовательского интерфейса с использованием многоразовых компонентов.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="129c12d2-b74f-80b4-a4d3-de8f3a00c27d"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/translate_red.svg"/></div><div style="width:100%"><p id="129c12d2-b74f-80db-9fa4-c4d75f62e7d4" class="">React — Vue — Angular</p></div></figure><p id="129c12d2-b74f-804c-a27f-f4d1152e4226" class="">
+</p><h2 id="129c12d2-b74f-80a3-a83d-de8a8841fc7e" class=""><mark class="highlight-red"><mark class="highlight-gray_background">CSS Препроцессоры </mark></mark></h2><p id="129c12d2-b74f-807e-aadf-c6d21d6dd607" class="">Позволяют писать стили с более эффективным синтаксисом. И компилировать все в обычный CSS</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="129c12d2-b74f-80a1-83f5-f0ba9e879404"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/translate_red.svg"/></div><div style="width:100%"><p id="61823cff-c6ca-4d93-b60f-5f928487dd3e" class="">Sass — Less — Stylus</p></div></figure><p id="129c12d2-b74f-80d4-9c12-f5607c621c92" class="">
+</p><p id="129c12d2-b74f-8076-925d-e719532cf204" class="">Еще есть вариант использование <mark class="highlight-red"><mark class="highlight-gray_background">CSS Фреймворка</mark></mark></p><h2 id="129c12d2-b74f-80df-a9e9-ef3367d1f5af" class=""><mark class="highlight-red"><mark class="highlight-gray_background">CSS Фреймворки</mark></mark></h2><p id="129c12d2-b74f-803d-922e-cb03f9c6e10a" class="">Предварительно подготовленный CSS код</p><p id="129c12d2-b74f-806e-bff0-f77729ed586a" class="">Позволяет сэкономить время на разработку. И избежать распространенные ошибки </p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="129c12d2-b74f-80a1-9d13-f02e33ac6f37"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/translate_red.svg"/></div><div style="width:100%"><p id="55f9b03a-22bb-4cbb-953d-0626f2f4cb33" class="">TailWind — Bootstrap</p></div></figure><p id="129c12d2-b74f-8025-bc4a-ff89ab560128" class="">
+</p><h2 id="129c12d2-b74f-80d2-a5fc-d61f06ddd1a4" class=""><mark class="highlight-red"><mark class="highlight-gray_background">АвтоТесты</mark></mark></h2><p id="129c12d2-b74f-8032-b19f-e447135dec68" class="">Писать программы для тестирование кода</p><p id="129c12d2-b74f-80aa-90f1-d24dda99c051" class="">Сводит к минимум количество ошибок. И повышает качество наших приложений</p><p id="129c12d2-b74f-80a5-8c2a-d085080895bd" class="">Существует два популярных фреймворка для тестирование:</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="129c12d2-b74f-8005-be7e-c62c1ab47eb8"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/translate_red.svg"/></div><div style="width:100%"><p id="8959cdd9-2495-4f1b-bcbd-d236c5eb324c" class="">Jest — Vitest</p></div></figure><p id="129c12d2-b74f-8084-b223-d47a9b705322" class="">
+</p><h2 id="129c12d2-b74f-8065-8c79-dffa0469fa0d" class=""><mark class="highlight-red"><mark class="highlight-gray_background">Мета Фреймворки</mark></mark></h2><p id="129c12d2-b74f-803a-a853-da8abe01a668" class="">Это фреймворк более высокого уровня который находится поверх базовой библиотеки, и расширяет ее возможности.</p><p id="129c12d2-b74f-80a4-b17a-f523052ebab5" class="">
+</p><p id="129c12d2-b74f-806a-a9d7-c17ddfd3e5ea" class="">Для React </p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="129c12d2-b74f-80ef-9db4-d09a5e82007f"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/translate_red.svg"/></div><div style="width:100%"><p id="032a8d59-498f-47a4-bb7c-9dd38bab1168" class="">Next.Js — Remix</p></div></figure><p id="129c12d2-b74f-805e-a794-c70424fe7e4c" class="">
+</p><figure id="129c12d2-b74f-80fb-9b42-f44c8cea9beb" class="image"><a href="image%201.png"><img style="width:1248px" src="image%201.png"/></a></figure><p id="129c12d2-b74f-8089-9550-d8f982518a78" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
